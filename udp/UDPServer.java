@@ -31,9 +31,9 @@ public class UDPServer {
 			while(!close){
 				pacData = new byte[pacSize];
 				pac = new DatagramPacket(pacData,pacSize);
-				recvSoc.setSoTimeout(30000);
+				recvSoc.setSoTimeout(60000);
 				recvSoc.receive(pac);
-				String data = new String(pacData);
+				String data = new String(pac.getData(),0,pac.getLength());
 				processMessage(data);
 			}
 		}catch(SocketException e){
@@ -52,7 +52,7 @@ public class UDPServer {
 
 		// TO-DO: Use the data to construct a new MessageInfo object
 		try{
-			  msg = new MessageInfo(data);
+			  msg = new MessageInfo(cleanTextContent(data));
 		}catch(Exception e){
 			System.out.println("IO:" +e);
 		}
@@ -108,5 +108,19 @@ public class UDPServer {
 		UDPServer udpserver = new UDPServer(recvPort);
 		udpserver.run();
 	}
+
+	private static String cleanTextContent(String text)
+{
+		// strips off all non-ASCII characters
+		text = text.replaceAll("[^\\x00-\\x7F]", "");
+
+		// erases all the ASCII control characters
+		text = text.replaceAll("[\\p{Cntrl}&&[^\r\n\t]]", "");
+
+		// removes non-printable characters from Unicode
+		text = text.replaceAll("\\p{C}", "");
+
+		return text.trim();
+}
 
 }

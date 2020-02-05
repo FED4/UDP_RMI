@@ -59,10 +59,10 @@ public class UDPClient {
 
 		// TO-DO: Send the messages to the server
 		while(tries < countTo){
-		  MessageInfo msg = new MessageInfo(countTo, tries+1);
+		  MessageInfo msg = new MessageInfo(countTo,tries);
 			String message = msg.toString();
 			send(message,serverAddr,recvPort);
-			System.out.println(message+"\n");
+			//System.out.println(message);
 			tries++;
 		}
 	}
@@ -73,8 +73,9 @@ public class UDPClient {
 		DatagramPacket		pkt;
 
 		// TO-DO: build the datagram packet and send it to the server
-		payloadSize = payload.length();
+
 		pktData = payload.getBytes();
+		payloadSize = pktData.length;
 		pkt = new DatagramPacket(pktData,payloadSize,destAddr,destPort);
 		try{
 			sendSoc.send(pkt);
