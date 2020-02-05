@@ -55,13 +55,14 @@ public class UDPClient {
 	}
 
 	private void testLoop(InetAddress serverAddr, int recvPort, int countTo) {
-		int				tries = 0;
+		int tries = 0;
 
 		// TO-DO: Send the messages to the server
 		while(tries < countTo){
 		  MessageInfo msg = new MessageInfo(countTo, tries+1);
 			String message = msg.toString();
 			send(message,serverAddr,recvPort);
+			tries++;
 		}
 	}
 
