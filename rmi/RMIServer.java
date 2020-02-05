@@ -37,7 +37,7 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 		RMIServer rmis = null;
 
 		// TO-DO: Initialise Security Manager
-		if System.getSecurityManager() == null{
+		if (System.getSecurityManager() == null){
 			System.setSecurityManager(new RMISecurityManager());
 		}
 
@@ -67,6 +67,6 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 		// Now rebind the server to the registry (rebind replaces any existing servers bound to the serverURL)
 		// Note - Registry.rebind (as returned by createRegistry / getRegistry) does something similar but
 		// expects different things from the URL field.
-		Naming.rebind("rmi://localhost/RMIServer",rmis);
+		Naming.rebind(serverURL,server);
 	}
 }

@@ -58,8 +58,9 @@ public class UDPClient {
 		int				tries = 0;
 
 		// TO-DO: Send the messages to the server
-		while(tries <= countTo){
-			String message = "UDP test message-"+Integer.toString(tries);
+		while(tries < countTo){
+		  MessageInfo msg = new MessageInfo(countTo, tries+1);
+			String message = msg.toString();
 			send(message,serverAddr,recvPort);
 		}
 	}
@@ -79,6 +80,5 @@ public class UDPClient {
 			System.out.println("IO:" +e);
 		}
 
-		//reply?
 	}
 }

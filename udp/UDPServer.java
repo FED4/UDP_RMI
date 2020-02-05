@@ -28,18 +28,20 @@ public class UDPServer {
 		//        Use a timeout (e.g. 30 secs) to ensure the program doesn't block forever
 		try{
 		pacSize = 1000;
-		while(!close){
-			pacData = new byte[pacSize];
-			pac = new DatagramPacket(pacData,pacSize);
-			recvSoc.setSoTimeout(30000);
-			recvSoc.receive(pac);
-		}
-		String data = new String(pacData);
-		processMessage(data);
+			while(!close){
+				pacData = new byte[pacSize];
+				pac = new DatagramPacket(pacData,pacSize);
+				recvSoc.setSoTimeout(30000);
+				recvSoc.receive(pac);
+				String data = new String(pacData);
+				processMessage(data);
+			}
 		}catch(SocketException e){
 			System.out.println("Socket: "+e);
 		}catch(SocketTimeoutException e){
 			System.out.println("Timeout: "+e);
+		}catch(IOException e){
+			System.out.println("IO: "+e);
 		}
 
 	}
@@ -58,7 +60,7 @@ public class UDPServer {
 
 		// TO-DO: On receipt of first message, initialise the receive buffer
 
-		if(receivedMessages == null){
+		if(receivedMessages.length == 0){
 			int[] receivedMessages = new int[msg.messageNum];//why int
 		}
 
@@ -69,7 +71,7 @@ public class UDPServer {
 
 		// TO-DO: If this is the last expected message, then identify
 		//        any missing messages
-		if(msg.messageNum == msg.totalMessages-1){
+		if(msg.messageNum == msg.totalMessages){
 			close = true;
 			for(int i = 0; i < msg.totalMessages; i++){
 				if(receivedMessages[i] != 1){

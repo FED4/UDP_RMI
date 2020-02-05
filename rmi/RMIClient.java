@@ -26,15 +26,14 @@ public class RMIClient {
 
 		// TO-DO: Initialise Security Manager
 		try{
-			if System.getSecurityManager() == null {
+			if (System.getSecurityManager() == null){
 				System.setSecurityManager(new RMISecurityManager());
-
 			}
 
 			// TO-DO: Bind to RMIServer
-			Registry r = LocateRegistry.getRegistry(urlServer);
-			iRMIServer = (RMIServerI)r.lookup("rmi://remotehost/RMIServer");//get ref to stub
-			iRMIServer.invokemethod();//test
+			// Registry r = LocateRegistry.getRegistry(urlServer);
+			// iRMIServer = (RMIServerI)r.lookup("rmi://remotehost/RMIServer");//get ref to stub
+			// iRMIServer.invokemethod();//test
 
 
 		}catch(RemoteException e){
