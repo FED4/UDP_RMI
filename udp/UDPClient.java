@@ -62,6 +62,7 @@ public class UDPClient {
 		  MessageInfo msg = new MessageInfo(countTo, tries+1);
 			String message = msg.toString();
 			send(message,serverAddr,recvPort);
+			System.out.println(message+"\n");
 			tries++;
 		}
 	}
