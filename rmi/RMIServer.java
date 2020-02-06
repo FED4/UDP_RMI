@@ -38,11 +38,14 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 
 		// TO-DO: If this is the last expected message, then identify
 		//        any missing messages
-		if(msg.messageNum == totalMessages){
+		if(msg.messageNum == totalMessages - 1){
 			for(int i = 0; i < totalMessages; i++){
 				if(receivedMessages[i] != 1){
 					System.out.println(i+"th message is missing");
 				}
+			}
+			if(receivedMessages.length == totalMessages){
+					System.out.println("all message passed");
 			}
 		}
 
@@ -67,11 +70,13 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 
 		// TO-DO: Bind to RMI registry
 		try{
-			String name = new String("RMIServer");
-		 rebindServer(name,rmis);
+			String serverURL = new String("rmi://localhost/RMIServer");
+		 rebindServer(serverURL,rmis);
 		}catch (Exception e) {
 			System.out.println("Trouble:"+e);
 		}
+
+		System.out.println("Server is Ready!");
 
 	}
 
@@ -80,12 +85,13 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 		// TO-DO:
 		// Start / find the registry (hint use LocateRegistry.createRegistry(...)
 		// If we *know* the registry is running we could skip this (eg run rmiregistry in the start script)
-		Registry r = LocateRegistry.getRegistry();
+		Registry r = LocateRegistry.createRegistry(6778);
 		// TO-DO:
 		// Now rebind the server to the registry (rebind replaces any existing servers bound to the serverURL)
 		// Note - Registry.rebind (as returned by createRegistry / getRegistry) does something similar but
 		// expects different things from the URL field.
-		r.rebind(serverURL,server);}
+		r.rebind(serverURL,server);
+		}
 		catch(Exception e){
 			System.out.println("Exception: "+e);
 		}

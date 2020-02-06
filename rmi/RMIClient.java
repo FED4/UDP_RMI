@@ -33,8 +33,10 @@ public class RMIClient {
 				System.setSecurityManager(new RMISecurityManager());
 			}
 		// TO-DO: Bind to RMIServer
-		//Registry r = LocateRegistry.getRegistry(args[0]);
-		iRMIServer = (RMIServerI) Naming.lookup(urlServer);//get ref to stub
+		Registry r = LocateRegistry.getRegistry(args[0],6778);
+
+		iRMIServer = (RMIServerI) r.lookup(urlServer);//get ref to stub
+		System.out.println(args[0]);
 
 		}catch(RemoteException e){
 			System.out.println(" Remote:" + e);
@@ -44,9 +46,8 @@ public class RMIClient {
 
 		// TO-DO: Attempt to send messages the specified number of times
 		try{
-			int totalMessages = Integer.parseInt(args[1]);
-			for(int i = 0; i < totalMessages; i++){
-				MessageInfo msg = new MessageInfo(totalMessages,i);
+			for(int i = 0; i < numMessages; i++){
+				MessageInfo msg = new MessageInfo(numMessages,i);
 				iRMIServer.receiveMessage(msg);//test
 			}
 		}
