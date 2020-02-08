@@ -68,9 +68,9 @@ public class UDPServer {
 
 
 		// TO-DO: On receipt of first message, initialise the receive buffer
-		totalMessages = msg.totalMessages;
-		if(msg.messageNum == 0){
-			receivedMessages = new int[totalMessages];
+		if((msg != null && totalMessages == -1) || msg.messageNum == 0){
+			totalMessages = msg.totalMessages;
+				receivedMessages = new int[totalMessages];
 		}
 
 		// TO-DO: Log receipt of the message
