@@ -64,12 +64,12 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 			rmis = new RMIServer();//get ref to stub
 		}catch ( java.rmi.UnknownHostException uhe )
 			{
-         System.out.println("UnknownHostException:" + uhe);
+         System.out.println("in rmis: UnknownHostException:" + uhe);
       }
       catch ( RemoteException re ){
-         System.out.println("RemoteException" + re );
+         System.out.println("in rmis: RemoteException" + re );
       }catch (Exception e) {
-				System.out.println("Trouble:"+e);
+				System.out.println("in rmis: Trouble:"+e);
 			}
 
 
@@ -100,9 +100,9 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 		r.rebind(serverURL,server);
 		}
 		catch ( RemoteException re ){
-			 System.out.println("RemoteException" + re );
+			 System.out.println("in rebind: RemoteException" + re );
 		}catch(Exception e){
-			System.out.println("Exception: "+e);
+			System.out.println("in rebind: Exception: "+e);
 		}
 	}
 }

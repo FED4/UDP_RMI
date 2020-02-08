@@ -24,7 +24,7 @@ public class RMIClient {
 			System.exit(-1);
 		}
 
-		String urlServer = new String("rmi://" + args[0] + "/RMIServer");
+		String urlServer = new String("rmi://" + args[0] + ":1099/RMIServer");
 		int numMessages = Integer.parseInt(args[1]);
 
 
@@ -52,6 +52,9 @@ public class RMIClient {
 				MessageInfo msg = new MessageInfo(numMessages,i);
 				iRMIServer.receiveMessage(msg);//test
 			}
+		}
+		catch(java.rmi.ConnectException e){
+			System.out.println("in receive:java.rmi.ConnectException: "+e);
 		}
 		catch(Exception e){
 			System.out.println("in receive:Exception: "+e);
