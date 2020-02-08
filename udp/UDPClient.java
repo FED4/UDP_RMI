@@ -50,8 +50,6 @@ public class UDPClient {
 		}catch(SocketException e){
 			System.out.println("Socket:" +e);
 		}
-
-
 	}
 
 	private void testLoop(InetAddress serverAddr, int recvPort, int countTo) {
@@ -82,6 +80,5 @@ public class UDPClient {
 		}catch(IOException e){
 			System.out.println("IO:" +e);
 		}
-
 	}
 }

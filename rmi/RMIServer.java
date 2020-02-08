@@ -44,10 +44,9 @@ public class RMIServer extends UnicastRemoteObject implements RMIServerI {
 				}
 			}
 			if(receivedMessages.length == totalMessages){
-					System.out.println("all message passed");
+					System.out.println("all messages passed");
 			}
 		}
-
 	}
 
 

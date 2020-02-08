@@ -27,16 +27,15 @@ public class RMIClient {
 		String urlServer = new String("rmi://" + args[0] + "/RMIServer");
 		int numMessages = Integer.parseInt(args[1]);
 
-		// TO-DO: Initialise Security Manager
+
 		try{
+			// TO-DO: Initialise Security Manager
 			if (System.getSecurityManager() == null){
 				System.setSecurityManager(new RMISecurityManager());
 			}
-		// TO-DO: Bind to RMIServer
-		//Registry r = LocateRegistry.getRegistry(arg[0]);
-		//System.out.println(args[0]);
-		//iRMIServer = (RMIServerI) r.lookup("RMIServer");//get ref to stub
- 		iRMIServer = (RMIServerI) Naming.lookup(urlServer);
+
+			// TO-DO: Bind to RMIServer
+			iRMIServer = (RMIServerI) Naming.lookup(urlServer);
 		}catch(RemoteException e){
 			System.out.println("in lookup: Remote:" + e);
 		}catch ( NotBoundException nbe ){

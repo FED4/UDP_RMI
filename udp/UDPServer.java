@@ -29,28 +29,28 @@ public class UDPServer {
 		try{
 
 			while(!close){
-				pacSize = 2000;
+				pacSize = 128;
 				pacData = new byte[pacSize];
 				pac = new DatagramPacket(pacData,pacSize);
-				recvSoc.setSoTimeout(15000);
+				recvSoc.setSoTimeout(30000);
 				recvSoc.receive(pac);
 				String data = new String(pac.getData(),0,pac.getLength());
 				processMessage(data);
 			}
 		}catch(SocketTimeoutException e){
 			System.out.println("Timeout: "+e);
-
 			//identify message loss on Timeout
 			for(int i = 0; i < totalMessages; i++){
 				if(receivedMessages[i] != 1){
 					System.out.println(i+"th message is missing");
 				}
 			}
-
 		}catch(SocketException e){
 			System.out.println("Socket: "+e);
 		}catch(IOException e){
 			System.out.println("IO: "+e);
+		}catch(Exception e){
+			System.out.println("Exception: "+e);
 		}
 
 	}
@@ -68,24 +68,28 @@ public class UDPServer {
 
 
 		// TO-DO: On receipt of first message, initialise the receive buffer
-
-		if(totalMessages < 1){
-			receivedMessages = new int[msg.totalMessages];//why int
+		totalMessages = msg.totalMessages;
+		if(msg.messageNum == 0){
+			receivedMessages = new int[totalMessages];
 		}
 
 		// TO-DO: Log receipt of the message
 		System.out.println(data);
-		totalMessages++;
 		receivedMessages[msg.messageNum]=1;
 
 		// TO-DO: If this is the last expected message, then identify
 		//        any missing messages
-		if(msg.messageNum == msg.totalMessages){
+		if(msg.messageNum == msg.totalMessages-1){
 			close = true;
+			boolean missing = false;
 			for(int i = 0; i < msg.totalMessages; i++){
 				if(receivedMessages[i] != 1){
 					System.out.println(i+"th message is missing");
+					missing = true;
 				}
+			}
+			if(missing == false){
+					System.out.println("all messages passed");
 			}
 		}
 
