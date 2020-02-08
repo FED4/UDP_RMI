@@ -27,19 +27,28 @@ public class UDPServer {
 		// TO-DO: Receive the messages and process them by calling processMessage(...).
 		//        Use a timeout (e.g. 30 secs) to ensure the program doesn't block forever
 		try{
-		pacSize = 1000;
+
 			while(!close){
+				pacSize = 2000;
 				pacData = new byte[pacSize];
 				pac = new DatagramPacket(pacData,pacSize);
-				recvSoc.setSoTimeout(60000);
+				recvSoc.setSoTimeout(15000);
 				recvSoc.receive(pac);
 				String data = new String(pac.getData(),0,pac.getLength());
 				processMessage(data);
 			}
-		}catch(SocketException e){
-			System.out.println("Socket: "+e);
 		}catch(SocketTimeoutException e){
 			System.out.println("Timeout: "+e);
+
+			//identify message loss on Timeout
+			for(int i = 0; i < totalMessages; i++){
+				if(receivedMessages[i] != 1){
+					System.out.println(i+"th message is missing");
+				}
+			}
+
+		}catch(SocketException e){
+			System.out.println("Socket: "+e);
 		}catch(IOException e){
 			System.out.println("IO: "+e);
 		}

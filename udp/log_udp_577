@@ -1,0 +1,1541 @@
+feiyyfrank@feiyyfrank-MS-7B23:~/Projects/UDP_RMI$ make
+Building RMI Client/Server...
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Building UDP Client / Server...
+feiyyfrank@feiyyfrank-MS-7B23:~/Projects/UDP_RMI$ ./udpserver.sh 6777
+UDPServer ready
+1000;0
+
+1000;1
+
+1000;2
+
+1000;3
+
+1000;4
+
+1000;5
+
+1000;6
+
+1000;7
+
+1000;8
+
+1000;9
+
+1000;10
+
+1000;11
+
+1000;12
+
+1000;13
+
+1000;14
+
+1000;15
+
+1000;16
+
+1000;17
+
+1000;18
+
+1000;19
+
+1000;20
+
+1000;21
+
+1000;22
+
+1000;23
+
+1000;24
+
+1000;25
+
+1000;26
+
+1000;27
+
+1000;28
+
+1000;29
+
+1000;30
+
+1000;31
+
+1000;32
+
+1000;33
+
+1000;34
+
+1000;35
+
+1000;36
+
+1000;37
+
+1000;38
+
+1000;39
+
+1000;40
+
+1000;41
+
+1000;42
+
+1000;43
+
+1000;44
+
+1000;45
+
+1000;46
+
+1000;47
+
+1000;48
+
+1000;49
+
+1000;50
+
+1000;51
+
+1000;52
+
+1000;53
+
+1000;54
+
+1000;55
+
+1000;56
+
+1000;57
+
+1000;58
+
+1000;59
+
+1000;60
+
+1000;61
+
+1000;62
+
+1000;63
+
+1000;64
+
+1000;65
+
+1000;66
+
+1000;67
+
+1000;68
+
+1000;69
+
+1000;70
+
+1000;71
+
+1000;72
+
+1000;73
+
+1000;74
+
+1000;75
+
+1000;76
+
+1000;77
+
+1000;78
+
+1000;79
+
+1000;80
+
+1000;81
+
+1000;82
+
+1000;83
+
+1000;84
+
+1000;85
+
+1000;86
+
+1000;87
+
+1000;88
+
+1000;89
+
+1000;90
+
+1000;91
+
+1000;92
+
+1000;93
+
+1000;94
+
+1000;95
+
+1000;96
+
+1000;97
+
+1000;98
+
+1000;99
+
+1000;100
+
+1000;101
+
+1000;102
+
+1000;103
+
+1000;104
+
+1000;105
+
+1000;106
+
+1000;107
+
+1000;108
+
+1000;109
+
+1000;110
+
+1000;111
+
+1000;112
+
+1000;113
+
+1000;114
+
+1000;115
+
+1000;116
+
+1000;117
+
+1000;118
+
+1000;119
+
+1000;120
+
+1000;121
+
+1000;122
+
+1000;123
+
+1000;124
+
+1000;125
+
+1000;126
+
+1000;127
+
+1000;128
+
+1000;129
+
+1000;130
+
+1000;131
+
+1000;132
+
+1000;133
+
+1000;134
+
+1000;135
+
+1000;136
+
+1000;137
+
+1000;138
+
+1000;139
+
+1000;140
+
+1000;141
+
+1000;142
+
+1000;143
+
+1000;144
+
+1000;145
+
+1000;146
+
+1000;147
+
+1000;148
+
+1000;149
+
+1000;150
+
+1000;151
+
+1000;152
+
+1000;153
+
+1000;154
+
+1000;155
+
+1000;156
+
+1000;157
+
+1000;158
+
+1000;159
+
+1000;160
+
+1000;161
+
+1000;162
+
+1000;163
+
+1000;164
+
+1000;165
+
+1000;166
+
+1000;167
+
+1000;168
+
+1000;169
+
+1000;170
+
+1000;171
+
+1000;172
+
+1000;173
+
+1000;174
+
+1000;175
+
+1000;176
+
+1000;177
+
+1000;178
+
+1000;179
+
+1000;180
+
+1000;181
+
+1000;182
+
+1000;183
+
+1000;184
+
+1000;185
+
+1000;186
+
+1000;187
+
+1000;188
+
+1000;189
+
+1000;190
+
+1000;191
+
+1000;192
+
+1000;193
+
+1000;194
+
+1000;195
+
+1000;196
+
+1000;197
+
+1000;198
+
+1000;199
+
+1000;200
+
+1000;201
+
+1000;202
+
+1000;203
+
+1000;204
+
+1000;205
+
+1000;206
+
+1000;207
+
+1000;208
+
+1000;209
+
+1000;210
+
+1000;211
+
+1000;212
+
+1000;213
+
+1000;214
+
+1000;215
+
+1000;216
+
+1000;217
+
+1000;218
+
+1000;219
+
+1000;220
+
+1000;221
+
+1000;222
+
+1000;223
+
+1000;224
+
+1000;225
+
+1000;226
+
+1000;227
+
+1000;228
+
+1000;229
+
+1000;230
+
+1000;231
+
+1000;232
+
+1000;233
+
+1000;234
+
+1000;235
+
+1000;236
+
+1000;237
+
+1000;238
+
+1000;239
+
+1000;240
+
+1000;241
+
+1000;242
+
+1000;243
+
+1000;244
+
+1000;245
+
+1000;246
+
+1000;247
+
+1000;248
+
+1000;249
+
+1000;250
+
+1000;251
+
+1000;252
+
+1000;253
+
+1000;254
+
+1000;255
+
+1000;256
+
+1000;257
+
+1000;258
+
+1000;259
+
+1000;260
+
+1000;261
+
+1000;262
+
+1000;263
+
+1000;264
+
+1000;265
+
+1000;266
+
+1000;267
+
+1000;268
+
+1000;269
+
+1000;270
+
+1000;271
+
+1000;272
+
+1000;273
+
+1000;274
+
+1000;275
+
+1000;276
+
+1000;277
+
+1000;0
+
+1000;1
+
+1000;2
+
+1000;3
+
+1000;4
+
+1000;5
+
+1000;6
+
+1000;7
+
+1000;8
+
+1000;9
+
+1000;10
+
+1000;11
+
+1000;12
+
+1000;13
+
+1000;14
+
+1000;15
+
+1000;16
+
+1000;17
+
+1000;18
+
+1000;19
+
+1000;20
+
+1000;21
+
+1000;22
+
+1000;23
+
+1000;24
+
+1000;25
+
+1000;26
+
+1000;27
+
+1000;28
+
+1000;29
+
+1000;30
+
+1000;31
+
+1000;32
+
+1000;33
+
+1000;34
+
+1000;35
+
+1000;36
+
+1000;37
+
+1000;38
+
+1000;39
+
+1000;40
+
+1000;41
+
+1000;42
+
+1000;43
+
+1000;44
+
+1000;45
+
+1000;46
+
+1000;47
+
+1000;48
+
+1000;49
+
+1000;50
+
+1000;51
+
+1000;52
+
+1000;53
+
+1000;54
+
+1000;55
+
+1000;56
+
+1000;57
+
+1000;58
+
+1000;59
+
+1000;60
+
+1000;61
+
+1000;62
+
+1000;63
+
+1000;64
+
+1000;65
+
+1000;66
+
+1000;67
+
+1000;68
+
+1000;69
+
+1000;70
+
+1000;71
+
+1000;72
+
+1000;73
+
+1000;74
+
+1000;75
+
+1000;76
+
+1000;77
+
+1000;78
+
+1000;79
+
+1000;80
+
+1000;81
+
+1000;82
+
+1000;83
+
+1000;84
+
+1000;85
+
+1000;86
+
+1000;87
+
+1000;88
+
+1000;89
+
+1000;90
+
+1000;91
+
+1000;92
+
+1000;93
+
+1000;94
+
+1000;95
+
+1000;96
+
+1000;97
+
+1000;98
+
+1000;99
+
+1000;100
+
+1000;101
+
+1000;102
+
+1000;103
+
+1000;104
+
+1000;105
+
+1000;106
+
+1000;107
+
+1000;108
+
+1000;109
+
+1000;110
+
+1000;111
+
+1000;112
+
+1000;113
+
+1000;114
+
+1000;115
+
+1000;116
+
+1000;117
+
+1000;118
+
+1000;119
+
+1000;120
+
+1000;121
+
+1000;122
+
+1000;123
+
+1000;124
+
+1000;125
+
+1000;126
+
+1000;127
+
+1000;128
+
+1000;129
+
+1000;130
+
+1000;131
+
+1000;132
+
+1000;133
+
+1000;134
+
+1000;135
+
+1000;136
+
+1000;137
+
+1000;138
+
+1000;139
+
+1000;140
+
+1000;141
+
+1000;142
+
+1000;143
+
+1000;144
+
+1000;145
+
+1000;146
+
+1000;147
+
+1000;148
+
+1000;149
+
+1000;150
+
+1000;151
+
+1000;152
+
+1000;153
+
+1000;154
+
+1000;155
+
+1000;156
+
+1000;157
+
+1000;158
+
+1000;159
+
+1000;160
+
+1000;161
+
+1000;162
+
+1000;163
+
+1000;164
+
+1000;165
+
+1000;166
+
+1000;167
+
+1000;168
+
+1000;169
+
+1000;170
+
+1000;171
+
+1000;172
+
+1000;173
+
+1000;174
+
+1000;175
+
+1000;176
+
+1000;177
+
+1000;178
+
+1000;179
+
+1000;180
+
+1000;181
+
+1000;182
+
+1000;183
+
+1000;184
+
+1000;185
+
+1000;186
+
+1000;187
+
+1000;188
+
+1000;189
+
+1000;190
+
+1000;191
+
+1000;192
+
+1000;193
+
+1000;194
+
+1000;195
+
+1000;196
+
+1000;197
+
+1000;198
+
+1000;199
+
+1000;200
+
+1000;201
+
+1000;202
+
+1000;203
+
+1000;204
+
+1000;205
+
+1000;206
+
+1000;207
+
+1000;208
+
+1000;209
+
+1000;210
+
+1000;211
+
+1000;212
+
+1000;213
+
+1000;214
+
+1000;215
+
+1000;216
+
+1000;217
+
+1000;218
+
+1000;219
+
+1000;220
+
+1000;221
+
+1000;222
+
+1000;223
+
+1000;224
+
+1000;225
+
+1000;226
+
+1000;227
+
+1000;228
+
+1000;229
+
+1000;230
+
+1000;231
+
+1000;232
+
+1000;233
+
+1000;234
+
+1000;235
+
+1000;236
+
+1000;237
+
+1000;238
+
+1000;239
+
+1000;240
+
+1000;241
+
+1000;242
+
+1000;243
+
+1000;244
+
+1000;245
+
+1000;246
+
+1000;247
+
+1000;248
+
+1000;249
+
+1000;250
+
+1000;251
+
+1000;252
+
+1000;253
+
+1000;254
+
+1000;255
+
+1000;256
+
+1000;257
+
+1000;258
+
+1000;259
+
+1000;260
+
+1000;261
+
+1000;262
+
+1000;263
+
+1000;264
+
+1000;265
+
+1000;266
+
+1000;267
+
+1000;268
+
+1000;269
+
+1000;270
+
+1000;271
+
+1000;272
+
+1000;273
+
+1000;274
+
+1000;275
+
+1000;276
+
+1000;277
+
+1000;278
+
+1000;279
+
+1000;488
+
+1000;489
+
+1000;490
+
+1000;491
+
+1000;492
+
+1000;493
+
+1000;494
+
+1000;495
+
+1000;496
+
+1000;497
+
+1000;498
+
+1000;499
+
+1000;500
+
+1000;501
+
+1000;502
+
+1000;503
+
+1000;504
+
+1000;505
+
+1000;506
+
+1000;507
+
+1000;508
+
+1000;509
+
+1000;510
+
+1000;511
+
+1000;512
+
+1000;513
+
+1000;514
+
+1000;515
+
+1000;516
+
+1000;517
+
+1000;518
+
+1000;519
+
+1000;520
+
+1000;521
+
+1000;522
+
+1000;523
+
+1000;524
+
+1000;525
+
+1000;526
+
+1000;527
+
+1000;528
+
+1000;529
+
+1000;530
+
+1000;531
+
+1000;532
+
+1000;533
+
+1000;534
+
+1000;535
+
+1000;536
+
+1000;537
+
+1000;538
+
+1000;539
+
+1000;540
+
+1000;541
+
+1000;542
+
+1000;543
+
+1000;544
+
+1000;545
+
+1000;546
+
+1000;547
+
+1000;548
+
+1000;549
+
+1000;550
+
+1000;551
+
+1000;552
+
+1000;553
+
+1000;554
+
+1000;555
+
+1000;556
+
+1000;557
+
+Timeout: java.net.SocketTimeoutException: Receive timed out
+280th message is missing
+281th message is missing
+282th message is missing
+283th message is missing
+284th message is missing
+285th message is missing
+286th message is missing
+287th message is missing
+288th message is missing
+289th message is missing
+290th message is missing
+291th message is missing
+292th message is missing
+293th message is missing
+294th message is missing
+295th message is missing
+296th message is missing
+297th message is missing
+298th message is missing
+299th message is missing
+300th message is missing
+301th message is missing
+302th message is missing
+303th message is missing
+304th message is missing
+305th message is missing
+306th message is missing
+307th message is missing
+308th message is missing
+309th message is missing
+310th message is missing
+311th message is missing
+312th message is missing
+313th message is missing
+314th message is missing
+315th message is missing
+316th message is missing
+317th message is missing
+318th message is missing
+319th message is missing
+320th message is missing
+321th message is missing
+322th message is missing
+323th message is missing
+324th message is missing
+325th message is missing
+326th message is missing
+327th message is missing
+328th message is missing
+329th message is missing
+330th message is missing
+331th message is missing
+332th message is missing
+333th message is missing
+334th message is missing
+335th message is missing
+336th message is missing
+337th message is missing
+338th message is missing
+339th message is missing
+340th message is missing
+341th message is missing
+342th message is missing
+343th message is missing
+344th message is missing
+345th message is missing
+346th message is missing
+347th message is missing
+348th message is missing
+349th message is missing
+350th message is missing
+351th message is missing
+352th message is missing
+353th message is missing
+354th message is missing
+355th message is missing
+356th message is missing
+357th message is missing
+358th message is missing
+359th message is missing
+360th message is missing
+361th message is missing
+362th message is missing
+363th message is missing
+364th message is missing
+365th message is missing
+366th message is missing
+367th message is missing
+368th message is missing
+369th message is missing
+370th message is missing
+371th message is missing
+372th message is missing
+373th message is missing
+374th message is missing
+375th message is missing
+376th message is missing
+377th message is missing
+378th message is missing
+379th message is missing
+380th message is missing
+381th message is missing
+382th message is missing
+383th message is missing
+384th message is missing
+385th message is missing
+386th message is missing
+387th message is missing
+388th message is missing
+389th message is missing
+390th message is missing
+391th message is missing
+392th message is missing
+393th message is missing
+394th message is missing
+395th message is missing
+396th message is missing
+397th message is missing
+398th message is missing
+399th message is missing
+400th message is missing
+401th message is missing
+402th message is missing
+403th message is missing
+404th message is missing
+405th message is missing
+406th message is missing
+407th message is missing
+408th message is missing
+409th message is missing
+410th message is missing
+411th message is missing
+412th message is missing
+413th message is missing
+414th message is missing
+415th message is missing
+416th message is missing
+417th message is missing
+418th message is missing
+419th message is missing
+420th message is missing
+421th message is missing
+422th message is missing
+423th message is missing
+424th message is missing
+425th message is missing
+426th message is missing
+427th message is missing
+428th message is missing
+429th message is missing
+430th message is missing
+431th message is missing
+432th message is missing
+433th message is missing
+434th message is missing
+435th message is missing
+436th message is missing
+437th message is missing
+438th message is missing
+439th message is missing
+440th message is missing
+441th message is missing
+442th message is missing
+443th message is missing
+444th message is missing
+445th message is missing
+446th message is missing
+447th message is missing
+448th message is missing
+449th message is missing
+450th message is missing
+451th message is missing
+452th message is missing
+453th message is missing
+454th message is missing
+455th message is missing
+456th message is missing
+457th message is missing
+458th message is missing
+459th message is missing
+460th message is missing
+461th message is missing
+462th message is missing
+463th message is missing
+464th message is missing
+465th message is missing
+466th message is missing
+467th message is missing
+468th message is missing
+469th message is missing
+470th message is missing
+471th message is missing
+472th message is missing
+473th message is missing
+474th message is missing
+475th message is missing
+476th message is missing
+477th message is missing
+478th message is missing
+479th message is missing
+480th message is missing
+481th message is missing
+482th message is missing
+483th message is missing
+484th message is missing
+485th message is missing
+486th message is missing
+487th message is missing
+558th message is missing
+559th message is missing
+560th message is missing
+561th message is missing
+562th message is missing
+563th message is missing
+564th message is missing
+565th message is missing
+566th message is missing
+567th message is missing
+568th message is missing
+569th message is missing
+570th message is missing
+571th message is missing
+572th message is missing
+573th message is missing
+574th message is missing
+575th message is missing
+576th message is missing
+577th message is missing
+578th message is missing
+579th message is missing
+580th message is missing
+581th message is missing
+582th message is missing
+583th message is missing
+584th message is missing
+585th message is missing
+586th message is missing
+587th message is missing
+588th message is missing
+589th message is missing
+590th message is missing
+591th message is missing
+592th message is missing
+593th message is missing
+594th message is missing
+595th message is missing
+596th message is missing
+597th message is missing
+598th message is missing
+599th message is missing
+600th message is missing
+601th message is missing
+602th message is missing
+603th message is missing
+604th message is missing
+605th message is missing
+606th message is missing
+607th message is missing
+608th message is missing
+609th message is missing
+610th message is missing
+611th message is missing
+612th message is missing
+613th message is missing
+614th message is missing
+615th message is missing
+616th message is missing
+617th message is missing
+618th message is missing
+619th message is missing
+620th message is missing
+621th message is missing
+622th message is missing
+623th message is missing
+624th message is missing
+625th message is missing
+626th message is missing
