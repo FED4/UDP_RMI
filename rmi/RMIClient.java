@@ -33,15 +33,18 @@ public class RMIClient {
 				System.setSecurityManager(new RMISecurityManager());
 			}
 		// TO-DO: Bind to RMIServer
-		Registry r = LocateRegistry.getRegistry(args[0],6778);
-
-		iRMIServer = (RMIServerI) r.lookup(urlServer);//get ref to stub
-		System.out.println(args[0]);
-
+		//Registry r = LocateRegistry.getRegistry(arg[0]);
+		//System.out.println(args[0]);
+		//iRMIServer = (RMIServerI) r.lookup("RMIServer");//get ref to stub
+ 		iRMIServer = (RMIServerI) Naming.lookup(urlServer);
 		}catch(RemoteException e){
-			System.out.println(" Remote:" + e);
+			System.out.println("in lookup: Remote:" + e);
+		}catch ( NotBoundException nbe ){
+			 System.out.println("in lookup: NotBoundException" +nbe);
+		}catch(NullPointerException e){
+			System.out.println("in lookup: NullPointerException: "+e);
 		}catch(Exception e){
-			System.out.println(" Exception:" + e);
+			System.out.println("in lookup: Exception:" + e);
 		}
 
 		// TO-DO: Attempt to send messages the specified number of times
@@ -52,7 +55,7 @@ public class RMIClient {
 			}
 		}
 		catch(Exception e){
-			System.out.println("Exceprion: "+e);
+			System.out.println("in receive:Exception: "+e);
 		}
 
 
